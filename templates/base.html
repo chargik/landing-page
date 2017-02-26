@@ -27,8 +27,16 @@
     <![endif]-->
   </head>
   <body>
+  {% if messages %}
+    <div class="alert alert-warning">
+    <div class="container">
+      {% for message in messages %}
+        {{ message }}<br>
+      {% endfor %}
+    </div>    
+    </div>
+  {% endif %}
   {% block content %}
-    
   {% endblock %}
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
