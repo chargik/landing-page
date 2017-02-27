@@ -19,15 +19,15 @@
 
 {% block content %}
 
-{% if page_obj.show_nav %}
-  {% include 'navbar.html' %}
-{% endif %}
+  {% if page_obj.show_nav %}
+    {% include 'navbar.html' %}
+  {% endif %}
 
 
-    {% if page_obj.layout == 'stacked' %}
-      {% include 'pages/snippet/stacked-layout.html' with page_obj=page_obj form=form %}
-    {% else %}
-      {% include 'pages/snippet/standart-layout.html' with page_obj=page_obj form=form %}      
+  {% if page_obj.layout == 'stacked' %}
+    {% include 'pages/snippet/stacked-layout.html' with page_obj=page_obj form=form %}
+  {% else %}
+    {% include 'pages/snippet/standart-layout.html' with page_obj=page_obj form=form %}      
     {% endif %}
 
 {% endblock content%}
