@@ -57,8 +57,12 @@
       $(document).ready(function(){
         var $marketingModal = $("#signUpModal");
         var didDismissModal = false;
+        var doShowMarketing = false;
+
+        doShowMarketing = $(".show-marketing").attr('show') == 'true';
+
         $("body").mouseleave(function(){
-          if (!didDismissModal){
+          if (!didDismissModal && doShowMarketing){
               $marketingModal.modal()
           }
         })
