@@ -19,7 +19,6 @@
     <div class='row'>
       
          <div class="col-xs-12" style='background-color:#ccc;margin-bottom: 20px;'>
-            
               <p>
               {% include 'pages/snippet/join-form.html' with form=form %} 
               </p>
@@ -30,7 +29,6 @@
 
     {% if page_obj.video_embed %}
              <div class='row'>
-             
               <div class='col-sm-8 col-sm-offset-2'>
                   <div class="embed-responsive embed-responsive-16by9">
                     {{ page_obj.video_embed|safe }}

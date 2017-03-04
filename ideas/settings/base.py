@@ -27,16 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1']
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'unklerufus@gmail.com' #my gmail username
-EMAIL_HOST_PASSWORD = '030a7c4h' #my gmail password
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "Chargik <unklerufus@gmail.com>"
 
-
-ADMINS = [('chargik', EMAIL_HOST_USER)]
-MANAGERS = ADMINS
+#ADMINS = [('chargik', EMAIL_HOST_USER)]
+#MANAGERS = ADMINS
 
 # Application definition
 

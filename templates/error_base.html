@@ -8,22 +8,14 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-
-
     <title>{% block title %}Travel-Ideas{% endblock %}</title>
-
     {% include 'head_css.html' %}
     <link href="{% static 'css/cover.css' %}" rel="stylesheet">
   </head>
-
   <body>
-
     <div class="site-wrapper">
-
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand"><a href="/">Travel-Ideas</a></h3>
@@ -36,24 +28,18 @@
               </nav> -->
             </div>
           </div>
-
           <div class="inner cover">
             <h1 class="cover-heading">{% block error_title %}{% endblock %}</h1>
             <p class="lead">{% block error_description %}{% endblock %}</p>
           </div>
-
           <div class="mastfoot">
             <div class="inner">
               <p>Cover template for <a href="/">Travel-Ideas</a>.</p>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
-
     {% include 'js.html' %}
   </body>
 </html>

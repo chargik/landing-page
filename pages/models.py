@@ -24,7 +24,7 @@ class Page(models.Model):
     title_btn_url = models.CharField(max_length=50, blank=True, null=True)
     content = models.TextField(blank=True, null=True)
     show_nav = models.BooleanField(default=True)
-    nav_color = models.CharField(max_length=7, default='#000000', validators=[])
+    nav_color = models.CharField(max_length=7, default='#000000', validators=[layout_validator])
     layout = models.CharField(max_length=20, choices=LAYOUT_CHOICES, default='standart')
     video_embed = models.TextField(null=True, blank=True)
     slug = models.SlugField(default='page-slug', blank=True)
@@ -43,7 +43,7 @@ class Page(models.Model):
         return self.title
 
 def pre_save_receiver_page_model(sender, instance, *args, **kwargs):
-    if instance.slug == 'page-slug' or instance.slug =='':
+    if instance.slug == 'page-slug' or instance.slug == '':
         instance.slug = unique_slug_generator(instance)
 
 pre_save.connect(pre_save_receiver_page_model, sender=Page)
