@@ -28,9 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1']
 
 
-#ADMINS = [('chargik', EMAIL_HOST_USER)]
-#MANAGERS = ADMINS
-
 # Application definition
 
 INSTALLED_APPS = [
